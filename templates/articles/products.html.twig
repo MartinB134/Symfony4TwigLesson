@@ -1,0 +1,16 @@
+{# templates/articles/products.html.twig #}
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}{% endblock %}
+
+{% block navbar %}{% endblock %}
+{% block title %}Welcome to my first Products page!{% endblock %}
+
+{% block body %}
+	<h1> Products </h1>
+	<ul> Test with Vars: <br>
+		<li>Here Var from Route-> {{ test }} -</li>
+		<li>Here Var from Product-> {{ product }} -</li>
+	</ul>
+{% endblock %}
+{% block javascripts %}{% endblock %}
