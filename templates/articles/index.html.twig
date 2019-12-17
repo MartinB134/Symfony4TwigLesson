@@ -1,13 +1,10 @@
 {# templates/articles/index.html.twig #}
+{% extends 'base.html.twig' %}
 
-<!DOCTYPE html>
-<html>
-<head>
-	<title>{% block title %}Welcome to my first twigpage!{% endblock %}</title>
-</head>
-<body>
-<h1> Great Success </h1>
+{% block title %}Welcome to my first twigpage!{% endblock %}
+{% block body %}
+
+<h1 class="md-3"> Great Success </h1>
 <p> Pha, easy. Get the new string first try: <br>Here-> {{ somevar }}</p>
 
-</body> 
-</html>
+{% endblock %}

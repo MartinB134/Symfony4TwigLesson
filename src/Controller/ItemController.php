@@ -56,15 +56,14 @@ class ItemController extends AbstractController
 	}
 	/**
 	 * Testvariable within the route
-	 * @Route("/products/productID={test}")
+	 * @Route("/products")
 	 */
-	public function getArticleOverview ($test) 
+	public function getArticleOverview () 
 	{
 		//Testvariable within the function
 		$product= '2';
-		return $this->render('articles/products.html.twig', [
-			'test' => $test,
-			'product' => $product
+		return $this->render('articles/index.html.twig', [
+			'somevar' => $product
 		]);
 	}
 }
