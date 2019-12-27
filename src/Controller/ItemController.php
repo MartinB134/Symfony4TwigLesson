@@ -19,26 +19,12 @@ class ItemController extends AbstractController
 	public function getArticle() 
 	{
 	 $somevar = "String";
-     static $somevar2 = "Using vars and stuff. NO biggie";
-     /*
-		return new Response('
-		<!DOCTYPE html>
-			<html>
-			<head>
-				<title>test</title>
-			</head>
-		<body>
-			<h1>Variable:</h1> 
-			<p><br>'.$somevar.'</p>
-		</body>
-		</html>');
-		*/
-	
-		return $this->render('articles/index.html.twig', [
-			'somevar' => $somevar2, 
+     $somevar2 = "Using vars and stuff. NO biggie";
+     
+     return $this->render('articles/index.html.twig', 
+     	[
+			'somevar' => $somevar2
 		]);
-
-		//$this->returnHeader();
 	}
 
 	/**
@@ -48,12 +34,14 @@ class ItemController extends AbstractController
 	public function getProduct ($test) 
 	{
 		//Testvariable within the function
-		$product= '2';
-		return $this->render('articles/products.html.twig', [
+		$product= 'TODO: Get specific id from Database';
+		return $this->render('articles/products.html.twig', 
+		[
 			'test' => $test,
 			'product' => $product
 		]);
 	}
+	
 	/**
 	 * Testvariable within the route
 	 * @Route("/products")
@@ -61,9 +49,10 @@ class ItemController extends AbstractController
 	public function getArticleOverview () 
 	{
 		//Testvariable within the function
-		$product= '2';
-		return $this->render('articles/index.html.twig', [
-			'somevar' => $product
+		$products= 'manyProducts/ All ids from Database here';
+		return $this->render('articles/index.html.twig', 
+		[
+			'somevar' => $products
 		]);
 	}
 }
